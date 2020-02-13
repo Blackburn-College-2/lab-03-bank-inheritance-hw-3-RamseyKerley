@@ -19,29 +19,41 @@ public class Main {
     public static void main(String[] args) {
         // TODO code application logic here
         Currency c = new Currency("dollar", "$");
-        Money m = new Money(c, 100);
-        Money m2 = new Money(c, 50);
-        Account a = new Account(m);
-        a.withdraw(m2);
-        System.out.println(a.toString());
+        Money m = new Money(c, 1000);
+        Money m2 = new Money(c, 55);
+        Money m3 = new Money(c, 90);
+        Money m4 = new Money(c, 500);
+        CheckingAccount a = new CheckingAccount(m);
+
         a.deposite(m);
         System.out.println(a.toString());
-        a.deposite(m);
-        System.out.println(a.toString());
+        System.out.println(a.getBalance());
         a.withdraw(m2);
         System.out.println(a.toString());
-        a.withdraw(m2);
+        System.out.println(a.getBalance());
+        a.deposite(m2);
         System.out.println(a.toString());
-        a.deposite(m);
+        System.out.println(a.getBalance());
+        a.deposite(m2);
         System.out.println(a.toString());
-        a.deposite(m);
-        System.out.println(a.toString());
-        a.deposite(m);
-        System.out.println(a.toString());
-        a.withdraw(m2);
-        System.out.println(a.toString());
-        a.withdraw(m2);
-        System.out.println(a.toString());
+        System.out.println(a.getBalance());
+
+        SavingsAccount s = new SavingsAccount(m);
+        System.out.println("Savings");
+        s.withdraw(m3);
+        System.out.println(s.toString());
+        s.withdraw(m3);
+        System.out.println(s.toString());
+        s.withdraw(m3);
+        System.out.println(s.toString());
+        s.deposite(m2);
+        System.out.println(s.toString());
+        s.deposite(m2);
+        System.out.println(s.toString());
+        s.deposite(m2);
+        System.out.println(s.toString());
+       
+
     }
 
 }

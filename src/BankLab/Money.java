@@ -10,37 +10,46 @@ package BankLab;
  * @author ramsey.kerley
  */
 public class Money {
+
     Currency currency;
     long amount;
-    
-    public Money(Currency c, long amount ){
-        this.amount  = amount;
+
+    public Money(Currency c, long amount) {
+        this.amount = amount;
         this.currency = c;
-        
+
     }
-    
-    public String getAmountString(){
-        
+
+    /**
+     * gets the amount
+     *
+     * @return a string showing the amount
+     */
+    public String getAmountString() {
+
         return "Amount : " + amount;
     }
-    
-    public Money add(Money input){
-        
+
+    public Money add(Money input) {
+        input.amount = this.amount + input.amount;
         return input;
     }
-    
-    
-     public String subtract(Money input){
-        
-        return input.toString();
+
+    public Money subtract(Money input) {
+        input.amount = this.amount - input.amount;
+        return input;
     }
-     
-     
+
+    public Money multiply(Money input) {
+        input.amount = this.amount * input.amount;
+        return input;
+    }
+
     @Override
-     public String toString(){
-         return  currency.symbol + "" + amount ;
-     }
-    
+    public String toString() {
+        return currency.symbol + "" + amount;
+    }
+
     
     
 }

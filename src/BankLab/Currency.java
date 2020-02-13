@@ -27,7 +27,11 @@ public class Currency {
    }
     
     
-    
+    @Override
+    public String toString(){
+        return "this is your currency" + name + " " + symbol;
+        
+    }
     
     
 }
