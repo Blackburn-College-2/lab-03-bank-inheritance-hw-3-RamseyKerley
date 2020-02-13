@@ -18,6 +18,40 @@ public class ExtraStuff {
         Money m4 = new Money(c, 500);
         CheckingAccount a = new CheckingAccount(m);
 
+            a.deposite(m);
+        System.out.println(a.toString());
+        System.out.println(a.getBalance());
+        a.withdraw(m2);
+        System.out.println(a.toString());
+        System.out.println(a.getBalance());
+        a.deposite(m2);
+        System.out.println(a.toString());
+        System.out.println(a.getBalance());
+        a.deposite(m2);
+        System.out.println(a.toString());
+        System.out.println(a.getBalance());
+
+        SavingsAccount s = new SavingsAccount(m);
+        System.out.println("Savings");
+        s.withdraw(m3);
+        System.out.println(s.toString());
+        s.withdraw(m3);
+        System.out.println(s.toString());
+        s.withdraw(m3);
+        System.out.println(s.toString());
+        s.deposite(m2);
+        System.out.println(s.toString());
+        s.deposite(m2);
+        System.out.println(s.toString());
+        s.deposite(m2);
+        System.out.println(s.toString());
         
+        System.out.println("loan to pay");
+        Loan l = new Loan(m4);
+        System.out.println(l.toString());
+        l.payOff(a);
+        System.out.println(l.toString());
+        
+       
     }
 }
