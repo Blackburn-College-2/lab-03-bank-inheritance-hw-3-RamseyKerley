@@ -30,15 +30,15 @@ public class Money {
     }
     
     
-     public Money subtract(Money input){
+     public String subtract(Money input){
         
-        return input;
+        return input.toString();
     }
      
      
     @Override
      public String toString(){
-         return amount + " " + currency;
+         return  currency.symbol + "" + amount ;
      }
     
     

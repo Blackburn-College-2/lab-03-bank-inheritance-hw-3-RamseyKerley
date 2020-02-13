@@ -9,9 +9,9 @@ package BankLab;
  *
  * @author ramsey.kerley
  */
-public final class Currency {
-   private String name;
-   private String symbol;
+public class Currency {
+   public String name;
+   public String symbol;
    
    public Currency(String name, String symbol){
        this.name = name;
